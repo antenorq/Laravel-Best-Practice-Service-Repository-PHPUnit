@@ -4,6 +4,9 @@
 @section('content')
 <h2>Blog Posts</h2>
 
+
+<a href="{{ route('blog.create') }}"><button type="button" class="btn btn-primary">Create a new post</button></a>
+
 @foreach($posts as $post)
 <div>
     <h3><a href="{{ route('blog.show', ['postId' => $post->id]) }}">{{ $post->title }}</a></h3>
@@ -12,5 +15,5 @@
 <hr>
 @endforeach
 
-<a href="{{ route('blog.create') }}">Create a new post</a>
+
 @endsection

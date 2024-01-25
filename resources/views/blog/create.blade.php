@@ -13,6 +13,7 @@
     <textarea name="content" id="content" required>{{ old('content') }}</textarea>
     <br>
     <button type="submit">Create Post</button>
+    <button type="button" class="btn btn-primary">Create a new post</button>
 </form>
 
 <a href="{{ route('blog.index') }}">Back to posts</a>
