@@ -6,13 +6,22 @@
 
 
 <a href="{{ route('blog.create') }}"><button type="button" class="btn btn-primary">Create a new post</button></a>
+<br><br><br><br>
+
 
 @foreach($posts as $post)
-<div>
-    <h3><a href="{{ route('blog.show', ['postId' => $post->id]) }}">{{ $post->title }}</a></h3>
-    <p>{{ $post->content }}</p>
+
+<div class="card">
+    <div class="card-header">
+        <a href="{{ route('blog.show', ['postId' => $post->id]) }}">{{ $post->title }}</a>
+    </div>
+    <div class="card-body">
+        {{ $post->content }}
+    </div>
 </div>
-<hr>
+<br>
+
+
 @endforeach
 
 
